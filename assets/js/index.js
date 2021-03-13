@@ -16,7 +16,7 @@ async function getText() {
                 const html = `
                 <div class="col">
                     <div class="card">
-                        <img src="${personaje.image}" class="card-img-top" alt="...">
+                        <img src="${personaje.image}" class="card-img-top" style="object-fit: cover;" alt="${personaje.name}">
                         <div class="card-body">
                             <h5 class="card-title">${personaje.name} ${statusChar}</h5>
                             <p class="card-text">
@@ -25,6 +25,7 @@ async function getText() {
                             <li><strong class="text-info">Genero:</strong> ${personaje.gender}</li>
                             </ul>
                             </p>
+                                <a href="single-character.html?id=${personaje.id}" class="btn btn-primary btn-block float-start">Ver más <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
                 </div>
