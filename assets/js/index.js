@@ -31,7 +31,6 @@ async function getText() {
                 </div>
                 `;
                 content.innerHTML += html;
-                console.log(personaje);
             })
         })
         .catch(function(error) {

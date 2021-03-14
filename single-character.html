@@ -22,6 +22,22 @@
                 <div class="page-spinner"></div><span>Bienvenido a <br><strong>Rick & Morthy API</strong>...</span>
             </div>
         </div>
+        <!-- Navbar (Solid background + shadow)-->
+        <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+        <header class="header">
+            <div class="topbar topbar-dark bg-dark">
+                <div class="container d-md-flex align-items-center px-0 px-xl-3">
+                    <div class="d-none d-md-block text-nowrap me-3">
+                        <a class="topbar-link me-1" href="https://web.whatsapp.com/send?phone=573113111538&text=Hola Santiago necesito ayuda en una página" target="_blank"><i class="fab fa-whatsapp fs-base text-success me-1 align-middle"></i> (+57) 3113111538</a>
+                    </div>
+                    <div class="d-flex text-md-end ms-md-auto">
+                        <div class="ms-auto ms-md-0 me-3">
+                            <img class="me-2" src="assets/static/images/co.png" alt="Español" width="20">Colombia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <!-- Page content-->
         <!-- Product gallery + info-->
         <section class="sidebar-enabled sidebar-end border-bottom mb-5 mb-md-6">
@@ -34,8 +50,10 @@
                         <div id="infoCharacter"></div>
                         <!-- Sharing-->
                         <div class="d-flex align-items-center justify-content-center justify-content-md-end py-4 pt-md-0 pt-lg-5">
-                            <h6 class="text-nowrap my-2 me-3">Share product:</h6><a class="btn-social bs-outline bs-facebook ms-2 my-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-outline bs-twitter ms-2 my-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-outline bs-google ms-2 my-2"
-                                href="#"><i class="ai-google"></i></a><a class="btn-social bs-outline bs-email ms-2 my-2" href="#"><i class="ai-mail"></i></a>
+                            <h6 class="text-nowrap my-2 me-3">Share product:</h6>
+                            <a class="btn-social bs-outline bs-facebook ms-2 my-2" href="https://www.facebook.com/santiago.arangogutierrez.1/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn-social bs-outline bs-instagram ms-2 my-2" href="https://www.instagram.com/santiago_arango_g/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="btn-social bs-outline bs-email ms-2 my-2" href="mailto:santiago9606@gmail.com"><i class="far fa-envelope"></i></a>
                         </div>
                     </div>
                     <!-- Product info-->
@@ -46,6 +64,60 @@
                     </div>
                 </div>
         </section>
+
+        <!-- Back to top button-->
+        <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+            <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon fas fa-arrow-up">   </i>
+        </a>
+        <br>
+        <footer class="footer bg-dark pt-5 pt-md-6">
+            <div class="container pt-3 pt-md-0">
+                <div class="row pb-3">
+                    <div class="col-md-4 mt-n2 pb-3 pb-md-0 mb-4">
+                        <a class="d-block mb-3" href="index.html" style="width: 153px;"><img src="assets/static/images/logo.png" alt="Around"></a>
+                        <p class="fs-sm text-light opacity-60 pb-2 pb-sm-3">Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta</p>
+                        <a class="btn-social bs-outline bs-facebook bs-light bs-lg me-2 mb-2" href="https://www.facebook.com/santiago.arangogutierrez.1/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn-social bs-outline bs-instagram bs-light bs-lg me-2 mb-2" href="https://www.instagram.com/santiago_arango_g/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn-social bs-outline bs-google bs-light bs-lg me-2 mb-2" href="mailto:santiago9606@gmail.com"><i class="far fa-envelope"></i></a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 mb-4">
+                    </div>
+                    <div class="col-md-2 col-sm-4 ms-auto pb-1 mb-4">
+                        <div class="widget widget-light">
+                            <h4 class="widget-title">Docs</h4>
+                            <ul>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#rest" target="_blank">REST</a></li>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#character-schema" target="_blank">Character</a></li>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#location-schema" target="_blank">Location</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 pb-1 mb-4">
+                        <div class="widget widget-light">
+                            <h4 class="widget-title">Libraries</h4>
+                            <ul>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#go" target="_blank">Go</a></li>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#java" target="_blank">Java</a></li>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#net" target="_blank">Net</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-0 border-light">
+                <div class="row align-items-center mt-3 py-4">
+                    <div class="col-md-6 order-md-2 text-md-end mb-3">
+                        <ul class="list-inline fs-sm mb-0">
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Support</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Contacts</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 order-md-1 mb-3">
+                        <p class="fs-sm mb-0"><span class="text-light opacity-50 me-1">© All rights reserved. Made by</span><a class="nav-link-style nav-link-light" href="https://github.com/santiagoarangog/" target="_blank" rel="noopener">Santiago Arango Gutierrez</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
 </body>
 

@@ -5,16 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Theme CSS -->
     <link rel="stylesheet" href="assets/css/theme.min.css">
-    <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/loader.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <!-- Font awesome-->
+    <link rel="stylesheet" href="assets/libs/animate.css/animate.css">
+    <link rel="stylesheet" href="assets/libs/offline/css/offline-theme-dark.css">
     <title>Ejecicio Rick & Morthy API</title>
-    <script src="assets/js/theme.min.js"></script>
     <script src="assets/js/loader.min.js"></script>
     <script src="assets/js/index.js"></script>
 </head>
 
 <body>
+    <!-- Navbar (Solid background + shadow)-->
+    <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+    <header class="header">
+        <div class="topbar topbar-dark bg-dark">
+            <div class="container d-md-flex align-items-center px-0 px-xl-3">
+                <div class="d-none d-md-block text-nowrap me-3">
+                    <a class="topbar-link me-1" href="https://web.whatsapp.com/send?phone=573113111538&text=Hola Santiago necesito ayuda en una página" target="_blank"><i class="fab fa-whatsapp fs-base text-success me-1 align-middle"></i> (+57) 3113111538</a>
+                </div>
+                <div class="d-flex text-md-end ms-md-auto">
+                    <div class="ms-auto ms-md-0 me-3">
+                        <img class="me-2" src="assets/static/images/co.png" alt="Español" width="20">Colombia
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <main class="page-wrapper">
         <!-- Page loading spinner-->
         <div class="page-loading active">
@@ -22,12 +42,15 @@
                 <div class="page-spinner"></div><span>Bienvenido a <br><strong>Rick & Morthy API</strong>...</span>
             </div>
         </div>
-        <section class="bg-faded-primary position-relative py-md-7 py-5">
-            <h1 align="center">Rick & Morthy API</h1>
+        <section class="position-relative bg-dark pt-7 pb-5 pb-md-7 bg-size-cover bg-attachment-fixed" style="background-image: url(assets/static/images/cubes-bg.jpg);">
             <div class="shape shape-bottom shape-curve bg-body">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
             <path fill="currentColor" d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path>
           </svg>
+            </div>
+            <div class="container position-relative zindex-5 text-center pt-md-6 pt-lg-7 py-5 my-lg-3">
+                <h1 class="text-light mb-0">RICK & MORTHY <span class="h2 d-inline-block bg-faded-primary text-primary px-3 py-2 rounded-3 ms-3">API</span></h1>
+                <small class="fs-sm text-muted mb-2">For Santiago Arango Gutierrez</small>
             </div>
         </section>
         <br>
@@ -40,7 +63,63 @@
         <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
             <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon fas fa-arrow-up">   </i>
         </a>
+        <br>
+        <footer class="footer bg-dark pt-5 pt-md-6">
+            <div class="container pt-3 pt-md-0">
+                <div class="row pb-3">
+                    <div class="col-md-4 mt-n2 pb-3 pb-md-0 mb-4">
+                        <a class="d-block mb-3" href="index.html" style="width: 153px;"><img src="assets/static/images/logo.png" alt="Around"></a>
+                        <p class="fs-sm text-light opacity-60 pb-2 pb-sm-3">Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta</p>
+                        <a class="btn-social bs-outline bs-facebook bs-light bs-lg me-2 mb-2" href="https://www.facebook.com/santiago.arangogutierrez.1/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn-social bs-outline bs-instagram bs-light bs-lg me-2 mb-2" href="https://www.instagram.com/santiago_arango_g/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="btn-social bs-outline bs-google bs-light bs-lg me-2 mb-2" href="mailto:santiago9606@gmail.com"><i class="far fa-envelope"></i></a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 mb-4">
+                    </div>
+                    <div class="col-md-2 col-sm-4 ms-auto pb-1 mb-4">
+                        <div class="widget widget-light">
+                            <h4 class="widget-title">Docs</h4>
+                            <ul>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#rest" target="_blank">REST</a></li>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#character-schema" target="_blank">Character</a></li>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#location-schema" target="_blank">Location</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-4 pb-1 mb-4">
+                        <div class="widget widget-light">
+                            <h4 class="widget-title">Libraries</h4>
+                            <ul>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#go" target="_blank">Go</a></li>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#java" target="_blank">Java</a></li>
+                                <li><a class="widget-link" href="https://rickandmortyapi.com/documentation/#net" target="_blank">Net</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-0 border-light">
+                <div class="row align-items-center mt-3 py-4">
+                    <div class="col-md-6 order-md-2 text-md-end mb-3">
+                        <ul class="list-inline fs-sm mb-0">
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Support</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Contacts</a></li>
+                            <li class="list-inline-item"><a class="nav-link-style nav-link-light" href="#">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 order-md-1 mb-3">
+                        <p class="fs-sm mb-0"><span class="text-light opacity-50 me-1">© All rights reserved. Made by</span><a class="nav-link-style nav-link-light" href="https://github.com/santiagoarangog/" target="_blank" rel="noopener">Santiago Arango Gutierrez</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </main>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="assets/js/theme.min.js"></script>
+    <script type="text/javascript" src="assets/js/loader.min.js"></script>
 </body>
 
 </html>

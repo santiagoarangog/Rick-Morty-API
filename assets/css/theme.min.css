@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap");
-@import "font-awesome";
 @font-face {
     font-family: "around-icons";
     src: url("../fonts/around-icons.ttf?enmnv5") format("truetype"), url("../fonts/around-icons.woff?enmnv5") format("woff"), url("../fonts/around-icons.svg?enmnv5#around-icons") format("svg");
@@ -15446,7 +15445,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: rgba(55, 56, 78, 0.25);
     color: #fff;
     text-align: center;
-    opacity: 0;
+    /* opacity: 0; */
     z-index: 1025
 }
 
