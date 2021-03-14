@@ -10,26 +10,26 @@ function getCharacters() {
     fetch(url)
         .then((resp) => resp.json())
         .then(function(data) {
-            let info = data.results;
-            console.log(data);
             const htmlNav = `<ol class="py-1 my-2 breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">${data.name}</li>
                             </ol>`;
             breadcrumb.innerHTML += htmlNav;
-            const html = `
-                        <h1 class="mb-3 pb-4">${data.name}</h1>
-                        <!-- Product gallery-->
-                        <div class="product-gallery">
-                            <div class="product-gallery-preview order-sm-2">
-                                <div class="product-gallery-preview-item active" id="first"><img src="${data.image}" style="object-fit: cover;" alt="Product preview"></div>
-                            </div>
-                            <div class="product-gallery-thumblist order-sm-1" style='border-color:#0a66cc;'>
-                                <a class="product-gallery-thumblist-item active" href="#first"><img src="${data.image}" style="object-fit: cover;" alt="Product thumb"></a>
-                            </div>
-                        </div>
+            productName.innerHTML = `${data.name}`;
+            const htmlProduc = `
+                    <div class="product-gallery-preview-item active" id="first"><img src="${data.image}" style="object-fit: cover;" alt="Product preview"></div>
+                    <div class="product-gallery-preview-item" id="second"><img src="assets/static/images/7456f078134b703579cbcdc7d5b328dc.jpg" style="object-fit: cover;" alt="Product preview"></div>
+                    <div class="product-gallery-preview-item" id="three"><img src="assets/static/images/logo.png" style="object-fit: cover;" alt="Product preview"></div>
+                    <div class="product-gallery-preview-item" id="four"><img src="assets/static/images/cubes-bg.jpg" style="object-fit: cover;" alt="Product preview"></div>
                 `;
-            infoCharacter.innerHTML += html;
+            productGallery.innerHTML += htmlProduc;
+            const thumbnail = ` 
+                    <a class="product-gallery-thumblist-item active" href="#first"><img src="${data.image}" style="object-fit: cover;" alt="Product thumb"></a>
+                    <a class="product-gallery-thumblist-item" href="#second"><img src="assets/static/images/7456f078134b703579cbcdc7d5b328dc.jpg" style="object-fit: cover;" alt="Product thumb"></a>
+                    <a class="product-gallery-thumblist-item" href="#three"><img src="assets/static/images/logo.png" style="object-fit: cover;" alt="Product thumb"></a>
+                    <a class="product-gallery-thumblist-item" href="#four"><img src="assets/static/images/cubes-bg.jpg" style="object-fit: cover;" alt="Product thumb"></a>
+                `;
+            producThumbnail.innerHTML += thumbnail;
             const oterInfo = `<a class="d-inline-block text-decoration-none" href="#reviews" data-scroll>
                                 <div class="py-4">
                                     <del class="text-muted me-2">$-- / --</del><span class="h4 mb-0">$-- / --</span>
