@@ -18887,7 +18887,7 @@ a.card-floating-icon:hover {
     position: absolute;
     top: 100%;
     width: 100%;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     text-align: center;
     white-space: nowrap
 }
@@ -19044,7 +19044,7 @@ a.card-floating-icon:hover {
 
 .tns-carousel-wrapper.tns-controls-inside:not(.tns-nav-inside) .tns-nav~.tns-ovh,
 .tns-carousel-wrapper.tns-controls-inside:not(.tns-nav-inside) .tns-nav~.tns-inner {
-    margin-bottom: 2.75rem !important
+    margin-bottom: 2.75rem !important;
 }
 
 .tns-carousel-wrapper.tns-controls-inside [data-controls] {
@@ -19287,10 +19287,9 @@ a.card-floating-icon:hover {
 }
 
 .btn-video::before {
-    font-family: "Font Awesome 5 Free";
+    font-family: "around-icons";
     line-height: 5.625rem;
-    font-size: 50px;
-    content: "\f144"
+    content: "";
 }
 
 .btn-video:hover {

@@ -82,6 +82,41 @@ function getCharacters() {
 }
 
 
+// characterForYou();
+
+function characterForYou() {
+    const url = `https://rickandmortyapi.com/api/character/`;
+    fetch(url)
+        .then((resp) => resp.json())
+        .then(function(data) {
+            let info = data.results;
+            return info.map(function(character) {
+                console.log(character);
+                const characterForYou = `
+                <div class="pb-2 tns-item tns-slide-cloned" aria-hidden="true" tabindex="-1">
+                    <div class="card card-product card-hover mx-1">
+                        <a class="card-img-top" href="#"><img src="assets/static/images/7456f078134b703579cbcdc7d5b328dc.jpg" alt="Product thumbnail"></a>
+                        <div class="card-body"><a class="meta-link fs-xs mb-1" href="#">Men's shoes</a>
+                            <h3 class="fs-md fw-medium mb-2"><a class="meta-link" href="#">Sport Running Sneakers</a></h3><span class="text-heading fw-semibold">$127.00</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="star-rating mt-n1"><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i><i class="sr-star ai-star-filled active"></i>
+                            </div>
+                            <div class="d-flex align-items-center"><a class="btn-wishlist" href="#"><i class="ai-heart"></i><span class="btn-tooltip">Wishlist</span></a><span class="btn-divider"></span><a class="btn-addtocart" href="#"><i class="ai-shopping-cart"></i><span class="btn-tooltip">To Cart</span></a></div>
+                        </div>
+                    </div>
+                </div>
+                `;
+                document.querySelector(".tns-carousel-inner").innerHTML += characterForYou;
+            })
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+}
+
+
+
 function initialize() {
     var o = document.querySelectorAll(".product-gallery");
     if (o.length)
