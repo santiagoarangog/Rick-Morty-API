@@ -15,7 +15,7 @@ async function getText() {
                 }
                 const html = `
                 <div class="col">
-                    <div class="card">
+                    <div class="card card-hover">
                         <img src="${personaje.image}" class="card-img-top" style="object-fit: cover;" alt="${personaje.name}">
                         <div class="card-body">
                             <h5 class="card-title">${personaje.name} ${statusChar}</h5>
