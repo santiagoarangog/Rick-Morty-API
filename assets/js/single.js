@@ -72,6 +72,8 @@ function getCharacters() {
                                 </ul>
                         </div>`;
             oterInfoCharacter.innerHTML += oterInfo;
+            document.querySelector(".location").innerHTML = data.origin.name;
+            document.querySelector(".direction").innerHTML = data.origin.name;
             initialize();
         })
         .catch(function(error) {
@@ -84,7 +86,6 @@ function initialize() {
     var o = document.querySelectorAll(".product-gallery");
     if (o.length)
         for (var e = 0; e < o.length; e++) ! function(a) {
-            console.log('Llego aquí');
             for (var r = o[a].querySelectorAll(".product-gallery-thumblist-item"), n = o[a].querySelectorAll(".product-gallery-preview-item"), e = 0; e < r.length; e++) r[e].addEventListener("click", t);
 
             function t(e) {

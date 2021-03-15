@@ -19287,9 +19287,10 @@ a.card-floating-icon:hover {
 }
 
 .btn-video::before {
-    font-family: "around-icons";
+    font-family: "Font Awesome 5 Free";
     line-height: 5.625rem;
-    content: ""
+    font-size: 50px;
+    content: "\f144"
 }
 
 .btn-video:hover {

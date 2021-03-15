@@ -1,105 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <!DOCTYPE html>
-    <html lang="es">
+    <meta charset="UTF-8" />
+    <meta name="language" content="Spanish">
+    <meta http-equiv="content-language" content="es">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="title" content="Rick & Morthy API For Santiago Arango Gutierrez">
+    <meta name="description" content="Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta" />
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="language" content="Spanish">
-        <meta http-equiv="content-language" content="es">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="title" content="Rick & Morthy API For Santiago Arango Gutierrez">
-        <meta name="description" content="Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta" />
+    <title id="title"></title>
 
-        <title id="title"></title>
+    <meta name="robots" content="index, follow" />
+    <link rel="author" href="https://github.com/santiagoarangog/">
+    <meta name="subjetc" content="Rick & Morthy API" />
+    <meta name="generator" content="HTML5,CSS3,JAVASCRIPT" />
+    <meta name="revisit-after" content="1 Day" />
 
-        <meta name="robots" content="index, follow" />
-        <link rel="author" href="https://github.com/santiagoarangog/">
-        <meta name="subjetc" content="Rick & Morthy API" />
-        <meta name="generator" content="HTML5,CSS3,JAVASCRIPT" />
-        <meta name="revisit-after" content="1 Day" />
+    <!-- Theme and site -->
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#766df4">
+    <meta name="google-site-verification" content="uv0iOxljSDmdicTwA4I0xcL0JLATOiPdM9VThSntN00" />
 
-        <!-- Theme and site -->
-        <meta name="msapplication-TileColor" content="#766df4">
-        <meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png">
-        <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-        <meta name="theme-color" content="#766df4">
-        <meta name="google-site-verification" content="uv0iOxljSDmdicTwA4I0xcL0JLATOiPdM9VThSntN00" />
+    <!-- Style sheet-->
+    <link rel="stylesheet" href="assets/css/theme.min.css">
+    <link rel="stylesheet" href="assets/css/loader.min.css">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/libs/animate.css/animate.css">
+    <link rel="stylesheet" href="assets/libs/offline/css/offline-theme-dark.css">
 
-        <!-- Style sheet-->
-        <link rel="stylesheet" href="assets/css/theme.min.css">
-        <link rel="stylesheet" href="assets/css/loader.min.css">
-        <link rel="stylesheet" href="assets/css/all.css">
-        <link rel="stylesheet" href="assets/libs/animate.css/animate.css">
-        <link rel="stylesheet" href="assets/libs/offline/css/offline-theme-dark.css">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@developermen1">
+    <meta name="twitter:creator" content="@developermen1">
+    <meta name="twitter:title" content="Rick & Morthy API For Santiago Arango Gutierrez" />
+    <meta name="twitter:description" content="Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta">
+    <meta name="twitter:image" content="assets/static/images/logo.png">
 
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@developermen1">
-        <meta name="twitter:creator" content="@developermen1">
-        <meta name="twitter:title" content="Rick & Morthy API For Santiago Arango Gutierrez" />
-        <meta name="twitter:description" content="Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta">
-        <meta name="twitter:image" content="assets/static/images/logo.png">
+    <!-- Facebook -->
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content="https://santiagoarangog.github.io/Rick-Morthy-API/">
+    <meta property="og:site_name" content="Rick & Morthy API For Santiago Arango Gutierrez" />
+    <meta property="og:title" content="Rick & Morthy API For Santiago Arango Gutierrez">
+    <meta property="og:description" content="Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta">
+    <meta property="article:publisher" content="https://www.facebook.com/@developermen" />
+    <meta property="article:author" content="https://www.facebook.com/@developermen" />
+    <meta property="article:tag" content="Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://santiagoarangog.github.io/Rick-Morthy-API/assets/static/images/logo.png">
+    <meta property="og:image:secure_url" content="https://santiagoarangog.github.io/Rick-Morthy-API/assets/static/images/logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-        <!-- Facebook -->
-        <meta property="og:locale" content="es_ES" />
-        <meta property="og:url" content="<?php echo isset($ogUrl) ? $ogUrl : 'www.developermen.com'; ?>">
-        <meta property="og:site_name" content="<?php echo isset($ogSiteName) ? $ogSiteName : 'Desarrollo Web a la Medida, Planes de Compra, Diseño Grafico, Plantillas Web, Blog de Desarrollo Web.'; ?>" />
-        <meta property="og:title" content="<?php echo isset($ogTitle) ? $ogTitle : 'Developer Men &bull; Desarrollo Web a la medida de lo que usted necesita'; ?>">
-        <meta property="og:description" content="<?php echo isset($ogDescription) ? $ogDescription : 'Empresa de Desarrollo Web a la Medida, Ubicada en Llanogrande Rionegro Ant. Colombia. Ofrecemos: Desarrollo web en el oriente antioqueño y oriente cercano, Ayudas a Desarrolladores, Desarrollos web a la medida, Marketing Online, SEO, Monitorizacion de Trafico en Su Pagina, contamos con Planes para la Pagina que usted su Organizacion necesitan.' ?>">
-        <meta property="article:publisher" content="https://www.facebook.com/@developermen" />
-        <meta property="article:author" content="https://www.facebook.com/@developermen" />
-        <meta property="article:tag" content="<?php echo isset($ogArticleTag) ? $ogArticleTag : 'Developer Men &bull; Desarrollo web a la medida'; ?>" />
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="https://santiagoarangog.github.io/Rick-Morthy-API/assets/static/images/logo.png">
-        <meta property="og:image:secure_url" content="https://santiagoarangog.github.io/Rick-Morthy-API/assets/static/images/logo.png">
-        <meta property="og:image:type" content="image/png">
-        <meta property="og:image:type" content="image/jpg">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
+    <link rel="mask-icon" type="" href="assets/favicons/android-icon-192x192.png" color="#111" />
+    <!-- Android Icons -->
+    <link rel="icon" type="image/png" sizes="57x57" href="assets/favicons/android-icon-144x144.png" />
+    <link rel="icon" type="image/png" sizes="60x60" href="assets/favicons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="76x76" href="assets/favicons/android-icon-36x36.png" />
+    <link rel="icon" type="image/png" sizes="152x152" href="assets/favicons/android-icon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/favicons/android-icon-72x72.png" />
+    <!-- <link rel="icon" type="image/png" sizes="180x180" href="assets/favicons/android-icon-96x96.png"/> -->
 
-        <link rel="mask-icon" type="" href="assets/favicons/android-icon-192x192.png" color="#111" />
-        <!-- Android Icons -->
-        <link rel="icon" type="image/png" sizes="57x57" href="assets/favicons/android-icon-144x144.png" />
-        <link rel="icon" type="image/png" sizes="60x60" href="assets/favicons/android-icon-192x192.png" />
-        <link rel="icon" type="image/png" sizes="76x76" href="assets/favicons/android-icon-36x36.png" />
-        <link rel="icon" type="image/png" sizes="152x152" href="assets/favicons/android-icon-48x48.png" />
-        <link rel="icon" type="image/png" sizes="180x180" href="assets/favicons/android-icon-72x72.png" />
-        <!-- <link rel="icon" type="image/png" sizes="180x180" href="assets/favicons/android-icon-96x96.png"/> -->
+    <!-- Apple Icons -->
+    <link rel="apple-touch-icon" type="image/png" sizes="114x114" href="assets/favicons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="assets/favicons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="assets/favicons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="assets/favicons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/favicons/apple-icon-180x180.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="57x57" href="assets/favicons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="assets/favicons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="favicons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="precomposed" href="assets/favicons/apple-icon-precomposed.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="auto" href="assets/favicons/apple-icon.png" />
 
-        <!-- Apple Icons -->
-        <link rel="apple-touch-icon" type="image/png" sizes="114x114" href="assets/favicons/apple-icon-114x114.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="assets/favicons/apple-icon-120x120.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="assets/favicons/apple-icon-144x144.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="assets/favicons/apple-icon-152x152.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/favicons/apple-icon-180x180.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="57x57" href="assets/favicons/apple-icon-57x57.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="assets/favicons/apple-icon-72x72.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="favicons/apple-icon-76x76.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="precomposed" href="assets/favicons/apple-icon-precomposed.png" />
-        <link rel="apple-touch-icon" type="image/png" sizes="auto" href="assets/favicons/apple-icon.png" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicons/favicon-16x16.png" />
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/favicons/favicon-16x16.png" />
-        <link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
-        <link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+    <!-- Ms Icon -->
+    <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-70x70.png" sizes="70x70" />
+    <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-144x144.png" sizes="144x144" />
+    <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-150x150.png" sizes="150x150" />
+    <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-310x310.png" sizes="310x310" />
+    <link rel="manifest" href="assets/favicons/manifest.json" />
 
-        <!-- Ms Icon -->
-        <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-70x70.png" sizes="70x70" />
-        <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-144x144.png" sizes="144x144" />
-        <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-150x150.png" sizes="150x150" />
-        <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-310x310.png" sizes="310x310" />
-        <link rel="manifest" href="assets/favicons/manifest.json" />
-
-        <!-- Scripts -->
-        <script src="assets/js/loader.min.js"></script>
-        <script src="assets/js/index.js"></script>
-    </head>
+    <!-- Scripts -->
+    <script src="assets/js/loader.min.js"></script>
+</head>
 </head>
 
 <body>
@@ -164,6 +159,47 @@
                     </div>
                 </div>
         </section>
+
+        <div class="container">
+            <div class="row align-items-center pb-3 mb-5">
+                <div class="col-lg-5 col-md-6 offset-lg-1 order-md-2 pb-2 mb-4 pb-md-0 mb-md-0">
+                    <div class="bg-secondary bg-size-contain bg-repeat-0 bg-position-center rounded-3 py-7 px-4 text-center" style="background-image: url(assets/static/images/logo.png);object-fit: cover;">
+                        <a class="btn-video btn-video-sm my-4" href="https://www.youtube.com/watch?v=z9esFCnfFdU&ab_channel=DubstepEvilEye" lg-uid="lg0" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 offset-lg-1 order-md-1">
+                    <h2 class="h3 mb-4">Vídeo explicativo</h2>
+                    <p class="fs-sm">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                        adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-4 offset-lg-2">
+                    <img src="assets/static/images/map.png" style="object-fit: cover;" width="490" height="490" alt="">
+                </div>
+                <div class="col-lg-4 col-md-6 offset-lg-2 offset-md-1">
+                    <h2 class="h3 mb-4">De dónde es?</h2>
+                    <h6 class="mb-3 location"></h6>
+                    <p class="fs-sm pb-2 direction">​</p>
+                    <div class="d-flex mb-2">
+                        <div class="me-4 pe-2 text-center">
+                            <h4 class="h2 text-primary mb-1">3268</h4>
+                            <p class="text-heading">Workers</p>
+                        </div>
+                        <div class="me-4 pe-2 text-center">
+                            <h4 class="h2 text-primary mb-1">43%</h4>
+                            <p class="text-heading">Female</p>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="h2 text-primary mb-1">57%</h4>
+                            <p class="text-heading">Male</p>
+                        </div>
+                    </div>
+                    <h6 class="mb-3">Factory information</h6>
+                    <p class="fs-sm">​Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Back to top button-->
         <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
