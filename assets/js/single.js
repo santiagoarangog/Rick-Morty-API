@@ -24,10 +24,10 @@ function getCharacters() {
                 `;
             document.querySelector(".product-gallery-preview").innerHTML += htmlProduc;
             const thumbnail = ` 
-                    <a class="product-gallery-thumblist-item bg-size-cover active" href="#first" style="background-image: url(${data.image});object-fit: cover;"></a>
-                    <a class="product-gallery-thumblist-item bg-size-cover" href="#second" style="background-image: url(assets/static/images/7456f078134b703579cbcdc7d5b328dc.jpg); object-fit: cover;"></a>
-                    <a class="product-gallery-thumblist-item bg-size-cover" href="#three" style="background-image: url(assets/static/images/logo.png); object-fit: cover;"></a>
-                    <a class="product-gallery-thumblist-item bg-size-cover" href="#four" style="background-image: url(assets/static/images/cubes-bg.jpg); object-fit: cover;"></a>
+                    <a class="product-gallery-thumblist-item bg-size-cover zindex-5 active" href="#first" style="background-image: url(${data.image});object-fit: cover;"></a>
+                    <a class="product-gallery-thumblist-item bg-size-cover zindex-5" href="#second" style="background-image: url(assets/static/images/7456f078134b703579cbcdc7d5b328dc.jpg); object-fit: cover;"></a>
+                    <a class="product-gallery-thumblist-item bg-size-cover zindex-5" href="#three" style="background-image: url(assets/static/images/logo.png); object-fit: cover;"></a>
+                    <a class="product-gallery-thumblist-item bg-size-cover zindex-5" href="#four" style="background-image: url(assets/static/images/cubes-bg.jpg); object-fit: cover;"></a>
                 `;
             document.querySelector(".product-gallery-thumblist").innerHTML += thumbnail;
             const oterInfo = `<a class="d-inline-block text-decoration-none" href="#reviews" data-scroll>
@@ -83,6 +83,7 @@ function initialize() {
     var o = document.querySelectorAll(".product-gallery");
     if (o.length)
         for (var e = 0; e < o.length; e++) ! function(a) {
+            console.log('Llego aquí');
             for (var r = o[a].querySelectorAll(".product-gallery-thumblist-item"), n = o[a].querySelectorAll(".product-gallery-preview-item"), e = 0; e < r.length; e++) r[e].addEventListener("click", t);
 
             function t(e) {

@@ -25,7 +25,7 @@ async function getText() {
                             <li><strong class="text-info">Genero:</strong> ${personaje.gender}</li>
                             </ul>
                             </p>
-                                <a href="single-character.html?id=${personaje.id}" class="btn btn-primary btn-block float-start">Ver más <i class="fas fa-long-arrow-alt-right"></i></a>
+                                <a href="single-character.html?id=${personaje.id}" class="btn btn-primary btn-block">Ver más <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                     </div>
                 </div>

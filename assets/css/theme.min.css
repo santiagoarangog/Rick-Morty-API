@@ -20497,6 +20497,14 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
     }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .product-gallery-thumblist-item {
+        margin-top: 20vw;
+        display: inline-block;
+    }
+}
+
 .product-gallery-preview-item {
     position: absolute;
     top: 0;
@@ -20738,4 +20746,9 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
 
 .shape-curve {
     padding-bottom: 6.2%
+}
+
+padding-bottom: 6.2%
+}
+padding-bottom: 6.2%
 }
