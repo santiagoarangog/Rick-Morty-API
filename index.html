@@ -1,18 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta name="language" content="Spanish">
+    <meta http-equiv="content-language" content="es">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Theme CSS -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="title" content="Rick & Morthy API For Santiago Arango Gutierrez">
+    <meta name="description" content="Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta" />
+
+    <title>Rick & Morthy API For Santiago Arango Gutierrez</title>
+
+    <meta name="robots" content="index, follow" />
+    <link rel="author" href="https://github.com/santiagoarangog/">
+    <meta name="subjetc" content="Rick & Morthy API" />
+    <meta name="generator" content="HTML5,CSS3,JAVASCRIPT" />
+    <meta name="revisit-after" content="1 Day" />
+
+    <!-- Theme and site -->
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#766df4">
+    <meta name="google-site-verification" content="uv0iOxljSDmdicTwA4I0xcL0JLATOiPdM9VThSntN00" />
+
+    <!-- Style sheet-->
     <link rel="stylesheet" href="assets/css/theme.min.css">
     <link rel="stylesheet" href="assets/css/loader.min.css">
     <link rel="stylesheet" href="assets/css/all.css">
-    <!-- Font awesome-->
     <link rel="stylesheet" href="assets/libs/animate.css/animate.css">
     <link rel="stylesheet" href="assets/libs/offline/css/offline-theme-dark.css">
-    <title>Ejecicio Rick & Morthy API</title>
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@developermen1">
+    <meta name="twitter:creator" content="@developermen1">
+    <meta name="twitter:title" content="Rick & Morthy API For Santiago Arango Gutierrez" />
+    <meta name="twitter:description" content="Página de prueba donde se consume la API de Rick & Morthy y se muestran los elementos de esta">
+    <meta name="twitter:image" content="assets/static/images/logo.png">
+
+    <!-- Facebook -->
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:url" content="<?php echo isset($ogUrl) ? $ogUrl : 'www.developermen.com'; ?>">
+    <meta property="og:site_name" content="<?php echo isset($ogSiteName) ? $ogSiteName : 'Desarrollo Web a la Medida, Planes de Compra, Diseño Grafico, Plantillas Web, Blog de Desarrollo Web.'; ?>" />
+    <meta property="og:title" content="<?php echo isset($ogTitle) ? $ogTitle : 'Developer Men &bull; Desarrollo Web a la medida de lo que usted necesita'; ?>">
+    <meta property="og:description" content="<?php echo isset($ogDescription) ? $ogDescription : 'Empresa de Desarrollo Web a la Medida, Ubicada en Llanogrande Rionegro Ant. Colombia. Ofrecemos: Desarrollo web en el oriente antioqueño y oriente cercano, Ayudas a Desarrolladores, Desarrollos web a la medida, Marketing Online, SEO, Monitorizacion de Trafico en Su Pagina, contamos con Planes para la Pagina que usted su Organizacion necesitan.' ?>">
+    <meta property="article:publisher" content="https://www.facebook.com/@developermen" />
+    <meta property="article:author" content="https://www.facebook.com/@developermen" />
+    <meta property="article:tag" content="<?php echo isset($ogArticleTag) ? $ogArticleTag : 'Developer Men &bull; Desarrollo web a la medida'; ?>" />
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://santiagoarangog.github.io/Rick-Morthy-API/assets/static/images/logo.png">
+    <meta property="og:image:secure_url" content="https://santiagoarangog.github.io/Rick-Morthy-API/assets/static/images/logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link rel="mask-icon" type="" href="assets/favicons/android-icon-192x192.png" color="#111" />
+    <!-- Android Icons -->
+    <link rel="icon" type="image/png" sizes="57x57" href="assets/favicons/android-icon-144x144.png" />
+    <link rel="icon" type="image/png" sizes="60x60" href="assets/favicons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="76x76" href="assets/favicons/android-icon-36x36.png" />
+    <link rel="icon" type="image/png" sizes="152x152" href="assets/favicons/android-icon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/favicons/android-icon-72x72.png" />
+    <!-- <link rel="icon" type="image/png" sizes="180x180" href="assets/favicons/android-icon-96x96.png"/> -->
+
+    <!-- Apple Icons -->
+    <link rel="apple-touch-icon" type="image/png" sizes="114x114" href="assets/favicons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="assets/favicons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="assets/favicons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="assets/favicons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/favicons/apple-icon-180x180.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="57x57" href="assets/favicons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="assets/favicons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="favicons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="precomposed" href="assets/favicons/apple-icon-precomposed.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="auto" href="assets/favicons/apple-icon.png" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicons/favicon-16x16.png" />
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32" />
+
+    <!-- Ms Icon -->
+    <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-70x70.png" sizes="70x70" />
+    <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-144x144.png" sizes="144x144" />
+    <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-150x150.png" sizes="150x150" />
+    <link rel="ms-icon" type="image/png" href="assets/favicons/ms-icon-310x310.png" sizes="310x310" />
+    <link rel="manifest" href="assets/favicons/manifest.json" />
+
+    <!-- Scripts -->
     <script src="assets/js/loader.min.js"></script>
     <script src="assets/js/index.js"></script>
 </head>

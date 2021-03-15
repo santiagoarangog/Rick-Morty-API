@@ -16,6 +16,7 @@ function getCharacters() {
                             </ol>`;
             document.querySelector('#breadcrumb').innerHTML += htmlNav;
             document.querySelector(".product-name").append(data.name);
+            document.querySelector("#title").append(data.name);
             const htmlProduc = `
                     <div class="product-gallery-preview-item active" id="first"><img src="${data.image}" style="object-fit: cover;" alt="Product preview"></div>
                     <div class="product-gallery-preview-item" id="second"><img src="assets/static/images/7456f078134b703579cbcdc7d5b328dc.jpg" style="object-fit: cover;" alt="Product preview"></div>
