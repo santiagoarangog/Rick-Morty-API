@@ -14,22 +14,22 @@ function getCharacters() {
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">${data.name}</li>
                             </ol>`;
-            breadcrumb.innerHTML += htmlNav;
-            productName.innerHTML = `${data.name}`;
+            document.querySelector('#breadcrumb').innerHTML += htmlNav;
+            document.querySelector(".product-name").append(data.name);
             const htmlProduc = `
                     <div class="product-gallery-preview-item active" id="first"><img src="${data.image}" style="object-fit: cover;" alt="Product preview"></div>
                     <div class="product-gallery-preview-item" id="second"><img src="assets/static/images/7456f078134b703579cbcdc7d5b328dc.jpg" style="object-fit: cover;" alt="Product preview"></div>
                     <div class="product-gallery-preview-item" id="three"><img src="assets/static/images/logo.png" style="object-fit: cover;" alt="Product preview"></div>
                     <div class="product-gallery-preview-item" id="four"><img src="assets/static/images/cubes-bg.jpg" style="object-fit: cover;" alt="Product preview"></div>
                 `;
-            productGallery.innerHTML += htmlProduc;
+            document.querySelector(".product-gallery-preview").innerHTML += htmlProduc;
             const thumbnail = ` 
-                    <a class="product-gallery-thumblist-item active" href="#first"><img src="${data.image}" style="object-fit: cover;" alt="Product thumb"></a>
-                    <a class="product-gallery-thumblist-item" href="#second"><img src="assets/static/images/7456f078134b703579cbcdc7d5b328dc.jpg" style="object-fit: cover;" alt="Product thumb"></a>
-                    <a class="product-gallery-thumblist-item" href="#three"><img src="assets/static/images/logo.png" style="object-fit: cover;" alt="Product thumb"></a>
-                    <a class="product-gallery-thumblist-item" href="#four"><img src="assets/static/images/cubes-bg.jpg" style="object-fit: cover;" alt="Product thumb"></a>
+                    <a class="product-gallery-thumblist-item bg-size-cover active" href="#first" style="background-image: url(${data.image});object-fit: cover;"></a>
+                    <a class="product-gallery-thumblist-item bg-size-cover" href="#second" style="background-image: url(assets/static/images/7456f078134b703579cbcdc7d5b328dc.jpg); object-fit: cover;"></a>
+                    <a class="product-gallery-thumblist-item bg-size-cover" href="#three" style="background-image: url(assets/static/images/logo.png); object-fit: cover;"></a>
+                    <a class="product-gallery-thumblist-item bg-size-cover" href="#four" style="background-image: url(assets/static/images/cubes-bg.jpg); object-fit: cover;"></a>
                 `;
-            producThumbnail.innerHTML += thumbnail;
+            document.querySelector(".product-gallery-thumblist").innerHTML += thumbnail;
             const oterInfo = `<a class="d-inline-block text-decoration-none" href="#reviews" data-scroll>
                                 <div class="py-4">
                                     <del class="text-muted me-2">$-- / --</del><span class="h4 mb-0">$-- / --</span>
@@ -71,8 +71,24 @@ function getCharacters() {
                                 </ul>
                         </div>`;
             oterInfoCharacter.innerHTML += oterInfo;
+            initialize();
         })
         .catch(function(error) {
             console.log(error);
         });
 }
+
+
+function initialize() {
+    var o = document.querySelectorAll(".product-gallery");
+    if (o.length)
+        for (var e = 0; e < o.length; e++) ! function(a) {
+            for (var r = o[a].querySelectorAll(".product-gallery-thumblist-item"), n = o[a].querySelectorAll(".product-gallery-preview-item"), e = 0; e < r.length; e++) r[e].addEventListener("click", t);
+
+            function t(e) {
+                e.preventDefault();
+                for (var t = 0; t < r.length; t++) n[t].classList.remove("active"), r[t].classList.remove("active");
+                this.classList.add("active"), o[a].querySelector(this.getAttribute("href")).classList.add("active")
+            }
+        }(e)
+};

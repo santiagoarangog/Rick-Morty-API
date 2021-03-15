@@ -1005,4 +1005,3 @@ var tns = function() {
     };
     return $i
 }();
-//# sourceMappingURL=../sourcemaps/tiny-slider.js.map

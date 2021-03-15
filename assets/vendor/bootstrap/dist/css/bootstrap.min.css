@@ -20972,7 +20972,7 @@ rgba(255,
     box-sizing: border-box
 }
 @media (prefers-reduced-motion:no-preference) {
-    :root {
+     :root {
         scroll-behavior: smooth
     }
 }
@@ -31331,5 +31331,3 @@ fieldset:disabled .btn {
         display: none!important
     }
 }
-
-/*# sourceMappingURL=bootstrap.min.css.map */
